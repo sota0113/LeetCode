@@ -9,9 +9,9 @@ type TreeNode struct {
     Left *TreeNode
     Right *TreeNode
 }
-//
 
 func main () {
+	// initialize sample tree.
 	three := TreeNode{3, nil, nil}
 	two := TreeNode{2, nil, &three}
 	one := TreeNode{1, nil, &two}
@@ -20,16 +20,16 @@ func main () {
 }
 
 func preorderTraversal(root *TreeNode) []int {
-    res := []int{} //initialize result variable
+    res := []int{}
     if root == nil {
         return res
     }
 
-    helper(&res, root) //"&res" is memory address of variable "res"
+    helper(&res, root)
     return res
 }
 
-func helper(res *[]int, root *TreeNode) { //res and root are memory addresses.
+func helper(res *[]int, root *TreeNode) {
     *res = append(*res, root.Val)
     if root.Left != nil {
         helper(res,root.Left)
