@@ -19,12 +19,19 @@ func main () {
 	 /
 	3
 	*/
+	one := &TreeNode{1,nil,nil}
+	one.Right = &TreeNode{2,nil,nil}
+	one.Right.Left = &TreeNode{3,nil,nil}
+/*
 	three := TreeNode{3,nil,nil}
 	two := TreeNode{2,&three,nil}
 	one := TreeNode{1,nil,&two}
-	result :=inorderTraversal(&one)
+	*/
+
+	result :=inorderTraversal(one)
 	fmt.Println(result)
 }
+
 func inorderTraversal(root *TreeNode) []int {
 	res := []int{}
 	if root == nil {
