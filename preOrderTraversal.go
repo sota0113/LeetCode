@@ -1,3 +1,5 @@
+//前順巡回探索
+
 package main
 
 import (
@@ -11,7 +13,13 @@ type TreeNode struct {
 }
 
 func main () {
-	// initialize sample tree.
+	/* initialize sample tree.
+	   1
+	    \
+	     2
+	      \
+	       3
+	*/
 	three := TreeNode{3, nil, nil}
 	two := TreeNode{2, nil, &three}
 	one := TreeNode{1, nil, &two}
