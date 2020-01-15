@@ -70,19 +70,17 @@ func isSymmetric (root *TreeNode) bool {
 //左優先探索
 func leftPriorSearch (root *TreeNode,leftNode *[]string) {
 	//add root.Val to leftNode
-	if root != nil {
-		if root.Left != nil {
-			*leftNode = append(*leftNode,strconv.Itoa(root.Left.Val))
-		        leftPriorSearch(root.Left,leftNode)
-		} else {
-			*leftNode = append(*leftNode,"nil")
-		}
-		if root.Right != nil {
-			*leftNode = append(*leftNode,strconv.Itoa(root.Right.Val))
-		        leftPriorSearch(root.Right,leftNode)
-		} else {
-			*leftNode = append(*leftNode,"nil")
-		}
+	if root.Left != nil {
+		*leftNode = append(*leftNode,strconv.Itoa(root.Left.Val))
+	        leftPriorSearch(root.Left,leftNode)
+	} else {
+		*leftNode = append(*leftNode,"nil")
+	}
+	if root.Right != nil {
+		*leftNode = append(*leftNode,strconv.Itoa(root.Right.Val))
+	        leftPriorSearch(root.Right,leftNode)
+	} else {
+		*leftNode = append(*leftNode,"nil")
 	}
 }
 
