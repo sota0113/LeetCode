@@ -52,8 +52,8 @@ func helper(line *[][]int,numRows,counter int) *[][]int {
 		*line = append(*line,tmpLine)
 	} else {
 		// include conter+1 factors.
-		//first and last factor is 1.
-		//every other factors are sum of factor[n] and factor[n-1] of the previous line.
+		// both first and last factors are 1.
+		// every other factors are sum of [n] and [n-1] of the previous array.
 		prevLine := (*line)[counter-1]
 		tmpLine = append(tmpLine,1)
 		for i := 1 ; i < counter ;i++ { //counter factors are necessary and 2 factors,first and last, are not.
