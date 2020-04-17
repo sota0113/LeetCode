@@ -12,6 +12,13 @@ type ListNode struct {
 }
 
 func main () {
+        // expectation
+        // 2->4->3->nil --[convert]--> 243 --[reverse]--> 342
+        // 5->6->4->nil --[convert]--> 564 --[reverse]--> 465
+        // 342 + 465 = 807
+        // 807 --[reverse]--> 708
+        // 708 --[convert]--> 7->0->8->nil
+
 	// initialization
 	// 2 -> 4 -> 3 -> nil
 	l1 := ListNode{2,nil}
@@ -21,12 +28,6 @@ func main () {
 	l2 := ListNode{5,nil}
 	l2.Next = &ListNode{6,nil}
 	l2.Next.Next = &ListNode{4,nil}
-	// expectation
-	// 2->4->3->nil --[convert]--> 243 --[reverse]--> 342 
-	// 5->6->4->nil --[convert]--> 564 --[reverse]--> 465
-	// 342 + 465 = 807
-	// 807 --[reverse]--> 708
-	// 708 --[convert]--> 7->0->8->nil
 
 	result := addTwoNumbers(&l1,&l2)
 	depth,ans := depthSearch("",result,1)

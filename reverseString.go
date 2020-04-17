@@ -8,7 +8,7 @@ func main () {
 	// input "["h","e","l","o","o"]
 	// output "["o","o","l","e","h"]
 	// must solve recursively.
-	input := []byte("hello")
+	input := []byte("123456789")
 	reverseString(input)
 }
 
