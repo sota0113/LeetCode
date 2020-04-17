@@ -2,8 +2,11 @@
 ## Description
 My answers of LeetCode problems.  
 ## Usage
-Every code is written in Golang.  
+Every code is written in Golang and Bash.  
 Just execute command as below.
 ```
-go run <each file>.
+# golang files.
+go run <golang file name>.
+# bash files.
+./<bash file name>.
 ```
